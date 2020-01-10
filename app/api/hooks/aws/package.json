@@ -1,0 +1,12 @@
+{
+    "name": "aws",
+    "version": "0.0.1",
+    "description": "A Sails hook to listen to sqs events to update details of new users in postgres.",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Aradhya Upadhyay",
+    "dependencies": {
+        "aws-sdk": "^2.600.0",
+        "sqs-consumer": "^3.8.0"
+    }
+}

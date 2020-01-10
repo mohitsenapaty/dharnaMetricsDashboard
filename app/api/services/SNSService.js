@@ -2,7 +2,7 @@ const aws = require('aws-sdk');
 const respMessages = require('../constants/response');
 aws.config.update({ accessKeyId: sails.config.AWS.accessKey, secretAccessKey: sails.config.AWS.accessSecret });
 
-const sns = new aws.SNS({ region: sails.config.sqs.REGION_MUM });
+const sns = new aws.SNS({ region: sails.config.SQS.REGION_MUM });
 
 const publishAttentionData = async (message) => {
     if (sails.config.attentionSendActive && (typeof(sails.config.attentionSendActive) !== 'undefined')) {
