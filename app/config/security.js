@@ -50,5 +50,9 @@ module.exports.security = {
   ****************************************************************************/
 
   // csrf: false
-
+  cors: {
+    allRoutes: true,
+    allowOrigins: '*',
+    allowCredentials: false
+  }
 };
