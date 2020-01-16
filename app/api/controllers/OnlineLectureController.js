@@ -3,7 +3,6 @@ const respMessages = require('../constants/response');
 let studentAttentionData = async(req, res) => {
     let response = {};
     try{
-        console.log(req.body);
         let lectureid = req.params.lectureid;
         let dataBody = req.body;
         let messageBody = {lectureid: lectureid, dataBody: dataBody};

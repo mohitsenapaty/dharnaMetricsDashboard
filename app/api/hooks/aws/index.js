@@ -5,7 +5,6 @@ const sqs = new aws.SQS({ region: sails.config.SQS.REGION_MUM });
 const Consumer = require('sqs-consumer');
 
 let lectureData = {};
-lectureData['LEC634076786'] = {'a':1};
 
 //Functions to send data
 let intervalSendApp;
@@ -77,7 +76,7 @@ module.exports = function (sails) {
                                     studentObj = {attentionList:[], avgAttentionCurrent:null, totalAttentionSum: null};
                                     //lectureObj[dataBody.studentid] = studentObj;
                                 }
-                                console.log(dataBody);
+                                //console.log(dataBody);
                                 let attentionData = dataBody.attentionData;
                                 studentObj.attentionList.push(attentionData.val);
                                 if (_.isNumber(studentObj.avgAttentionCurrent)){
